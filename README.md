@@ -16,8 +16,6 @@
 ## 🛠 Tecnologias Utilizadas
 
 - HTML5, CSS3 e JavaScript Vanilla
-- *(Adicione aqui as tecnologias que você realmente usou, ex: Tailwind CSS, Bootstrap, etc.)*
-
 
 ## 🌐 Acessar o Site
 
