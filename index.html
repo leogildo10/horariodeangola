@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Horário de Angola - Hora Certa Oficial (UTC+1)</title>
     <meta name="description" content="⏰ Horário exato de Angola agora. Hora certa oficial de Luanda e todo o país. Relógio sincronizado automaticamente.">
-    
+   
     <!-- SEO -->
     <meta name="keywords" content="horário de angola, hora de angola, hora certa angola, relógio angola, hora luanda, fuso horário angola, hora atual angola">
     <meta name="robots" content="index, follow">
@@ -12,6 +12,12 @@
     <meta name="author" content="Horário de Angola">
     <meta name="language" content="pt-BR">
     <link rel="canonical" href="https://horariodeangola.com">
+
+    <!-- FAVICON - Bandeira de Angola -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/32x32.png" type="image/png">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/180x180.png">
 
     <!-- Open Graph / WhatsApp -->
     <meta property="og:title" content="Horário de Angola - Hora Certa Oficial">
@@ -22,7 +28,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+   
     <style>
         :root {
             --red: #DA291C;
@@ -119,13 +125,13 @@
         <h1>Horário de Angola</h1>
         <h2>A hora oficial de Angola (UTC+1)</h2>
     </div>
-   
+  
     <div id="content">
         <h3 id="dia-topo">Carregando...</h3>
         <p id="relogio">00:00:00</p>
         <p id="automatico">A hora certa é sincronizada automaticamente.<br>Não é necessário recarregar a página.</p>
     </div>
-
+    
     <div class="doe">
         <p>
             Acerte seu <strong>RELÓGIO</strong> com a hora oficial de Angola.<br><br>
@@ -146,17 +152,16 @@
 function atualizarHorarioAngola() {
     const optionsHora = { timeZone: "Africa/Luanda", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false };
     const optionsData = { timeZone: "Africa/Luanda", weekday: "long", day: "numeric", month: "long", year: "numeric" };
-    
+   
     const agora = new Date();
     document.getElementById('relogio').textContent = new Intl.DateTimeFormat('pt-BR', optionsHora).format(agora);
-
+    
     let dataFormatada = new Intl.DateTimeFormat('pt-BR', optionsData).format(agora);
     dataFormatada = dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
-    
+   
     document.getElementById('dia-topo').textContent = dataFormatada;
     document.getElementById('dia-rodape').textContent = dataFormatada;
 }
-
 atualizarHorarioAngola();
 setInterval(atualizarHorarioAngola, 1000);
 </script>
